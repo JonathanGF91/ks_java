@@ -8,7 +8,7 @@ import java.util.List;
 public class Bag {
     private int[] weightList;
     private int[] valueList;
-    private int[] elementsInside;
+    private List<Integer> elementsInside = new ArrayList<>();
     private int currentWeight = 0;
     private int nElements;
     private int maxWeight;
@@ -18,6 +18,38 @@ public class Bag {
         checkArgs(argv);
     }
 
+    public int getWeightOfIndex(int i) {
+        return weightList[i];
+    }
+
+    public int getValueOfIndex(int i) {
+        return valueList[i];
+    }
+
+    public int getCurrentWeight() {
+        return currentWeight;
+    }
+
+    public void setCurrentWeight(int currentWeight) {
+        this.currentWeight = currentWeight;
+    }
+
+    public int getnElements() {
+        return nElements;
+    }
+
+    public int getMaxWeight() {
+        return maxWeight;
+    }
+
+    public List<Integer> getElementsInside() {
+        return elementsInside;
+    }
+
+    public void setElementsInside(int element) {
+        this.elementsInside.add(element);
+    }
+    
     private void checkArgs(String argv[]) throws IOException {
         for (int i = 0; i < argv.length; i++) {
             switch(argv[i]){
