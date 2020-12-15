@@ -26,6 +26,14 @@ public class Bag {
         return valueList[i];
     }
 
+    public int[] getWeightList() {
+        return weightList;
+    }
+
+    public int[] getValueList() {
+        return valueList;
+    }
+
     public int getCurrentWeight() {
         return currentWeight;
     }
@@ -49,6 +57,15 @@ public class Bag {
     public void setElementsInside(int element) {
         this.elementsInside.add(element);
     }
+
+    public void setWeightList(int[] weightList) {
+        this.weightList = weightList;
+    }
+
+    public void setValueList(int[] valueList) {
+        this.valueList = valueList;
+    }
+    
     
     private void checkArgs(String argv[]) throws IOException {
         for (int i = 0; i < argv.length; i++) {
